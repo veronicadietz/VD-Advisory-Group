@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VD Advisory Group | Diagnostic Strategy for Identity-Led Founders</title>
+<meta name="description" content="VD Advisory Group is the diagnostic strategy practice of Veronica Dietz. We locate the load-bearing issue generating most of your business friction, so you stop treating symptoms and restructure the thing actually causing them." />
+<link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/69d6aea33d829c73b2e6e140.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --burnt: #C4500A;
+    --forest: #283618;
+    --cream: #FAF7F2;
+    --cream-deep: #F2EDE4;
+    --ink: #1a1a1a;
+    --muted: #5a5a55;
+    --hair: rgba(40, 54, 24, 0.14);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Montserrat', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+  .container-tight { max-width: 980px; margin: 0 auto; padding: 0 40px; }
+  .container-wide { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ============ NAV ============ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 22px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  nav.scrolled { border-bottom-color: var(--hair); }
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--forest);
+    text-decoration: none;
+  }
+  .nav-brand em { font-style: italic; color: var(--burnt); font-weight: 400; }
+  .nav-links { display: flex; gap: 38px; align-items: center; }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--burnt); }
+  .nav-cta {
+    border: 1px solid var(--forest);
+    padding: 10px 20px;
+    border-radius: 0;
+    background: transparent;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--forest); color: var(--cream) !important; }
+  .nav-mobile { display: none; }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 180px 0 120px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    font-weight: 500;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--burnt);
+    display: inline-block;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(44px, 6vw, 82px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--forest);
+    margin-bottom: 36px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--burnt);
+    font-weight: 400;
+  }
+  .hero-lede {
+    font-family: var(--sans);
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 500px;
+    margin-bottom: 48px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--forest);
+    font-weight: 500;
+    padding-top: 32px;
+    border-top: 1px solid var(--hair);
+  }
+  .hero-meta span { display: flex; flex-direction: column; gap: 4px; }
+  .hero-meta strong {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--burnt);
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: var(--cream-deep);
+    overflow: hidden;
+  }
+  .hero-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.95) contrast(1.02);
+  }
+  .hero-visual::after {
+    content: 'Est. 2016';
+    position: absolute;
+    bottom: 24px; left: 24px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    background: rgba(40, 54, 24, 0.85);
+    padding: 8px 16px;
+  }
+
+  /* ============ MARQUEE / Credibility strip ============ */
+  .strip {
+    border-top: 1px solid var(--hair);
+    border-bottom: 1px solid var(--hair);
+    padding: 28px 0;
+    background: var(--cream-deep);
+    overflow: hidden;
+  }
+  .strip-inner {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--forest);
+    font-weight: 400;
+    white-space: nowrap;
+    animation: slide 40s linear infinite;
+  }
+  .strip-inner span { display: flex; align-items: center; gap: 12px; }
+  .strip-inner span::after {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--burnt);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 80px;
+  }
+  @keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ============ THESIS SECTION ============ */
+  .thesis {
+    padding: 160px 0 140px;
+    position: relative;
+  }
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .section-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  .section-label-num {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--forest);
+    margin-bottom: 40px;
+  }
+  h2 em { font-style: italic; color: var(--burnt); }
+  .thesis-body p {
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink);
+    font-weight: 300;
+    margin-bottom: 24px;
+    max-width: 620px;
+  }
+  .thesis-body p.callout {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--forest);
+    border-left: 2px solid var(--burnt);
+    padding: 8px 0 8px 28px;
+    margin: 40px 0;
+    font-weight: 400;
+  }
+
+  /* ============ METHODOLOGY ============ */
+  .method {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 140px 0 120px;
+  }
+  .method h2 { color: var(--cream); }
+  .method h2 em { color: #e8a278; }
+  .method .section-label { color: #e8a278; }
+  .method .section-label-num { color: rgba(250, 247, 242, 0.6); }
+  .method-intro {
+    max-width: 760px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: rgba(250, 247, 242, 0.85);
+    font-weight: 300;
+    margin-bottom: 80px;
+  }
+  .method-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    counter-reset: step;
+  }
+  .method-step {
+    border-top: 1px solid rgba(250, 247, 242, 0.2);
+    padding-top: 28px;
+    counter-increment: step;
+  }
+  .method-step::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 36px;
+    color: #e8a278;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .method-step h3 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .method-step p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(250, 247, 242, 0.78);
+    font-weight: 300;
+  }
+
+  /* ============ FOUNDER ============ */
+  .founder {
+    padding: 160px 0 140px;
+  }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.2fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .founder-image {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: var(--cream-deep);
+    overflow: hidden;
+  }
+  .founder-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.95);
+  }
+  .founder-caption {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 16px;
+    padding-left: 4px;
+  }
+  .founder-content h2 { margin-bottom: 36px; }
+  .founder-content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .founder-facts {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--hair);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+  }
+  .founder-fact {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .founder-fact strong {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--forest);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 6px;
+    line-height: 1.3;
+  }
+
+  /* ============ OFFER LADDER ============ */
+  .ladder {
+    background: var(--cream-deep);
+    padding: 140px 0;
+  }
+  .ladder-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    margin-bottom: 80px;
+    align-items: end;
+  }
+  .ladder-header p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 560px;
+    font-weight: 300;
+  }
+  .ladder-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .rung {
+    display: grid;
+    grid-template-columns: 80px 1fr 300px 180px;
+    gap: 40px;
+    align-items: center;
+    padding: 36px 0;
+    border-top: 1px solid rgba(40, 54, 24, 0.18);
+    transition: all 0.4s ease;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  .rung:last-child { border-bottom: 1px solid rgba(40, 54, 24, 0.18); }
+  .rung::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 0; height: 1px;
+    background: var(--burnt);
+    transition: width 0.6s ease;
+  }
+  .rung:hover::before { width: 100%; }
+  .rung:hover .rung-name { color: var(--burnt); }
+  .rung:hover .rung-arrow { transform: translateX(8px); color: var(--burnt); }
+  .rung-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .rung-name {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--forest);
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+  .rung-desc {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .rung-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--forest);
+    font-weight: 500;
+  }
+  .rung-price-value {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--burnt);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .rung-arrow {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--forest);
+    transition: all 0.3s;
+  }
+
+  /* ============ PROOF / PATTERNS ============ */
+  .proof {
+    padding: 160px 0 140px;
+  }
+  .proof-header {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .proof-header .section-label {
+    display: inline-block;
+  }
+  .proof-header h2 { max-width: 900px; margin: 0 auto; }
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pattern {
+    border-top: 1px solid var(--hair);
+    padding-top: 28px;
+  }
+  .pattern-tag {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .pattern h3 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--forest);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .pattern p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* ============ PODCAST / AUTHORITY ============ */
+  .authority {
+    background: var(--burnt);
+    color: var(--cream);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .authority-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .authority .section-label { color: rgba(250, 247, 242, 0.75); }
+  .authority h2 { color: var(--cream); max-width: 560px; }
+  .authority h2 em { color: var(--cream); font-style: italic; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+  .authority p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(250, 247, 242, 0.92);
+    margin: 32px 0 40px;
+    font-weight: 300;
+    max-width: 540px;
+  }
+  .authority-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--cream);
+    color: var(--forest);
+    padding: 18px 32px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .authority-cta:hover { background: var(--forest); color: var(--cream); }
+  .authority-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .auth-stat {
+    border-top: 1px solid rgba(250, 247, 242, 0.3);
+    padding-top: 20px;
+  }
+  .auth-stat-num {
+    font-family: var(--serif);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+  .auth-stat-num em { font-style: italic; }
+  .auth-stat-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.8);
+    font-weight: 500;
+  }
+
+  /* ============ CLOSING / CTA ============ */
+  .closing {
+    padding: 180px 0 160px;
+    text-align: center;
+  }
+  .closing h2 {
+    font-size: clamp(40px, 5.5vw, 72px);
+    max-width: 900px;
+    margin: 0 auto 48px;
+  }
+  .closing p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 56px;
+    font-weight: 300;
+  }
+  .closing-ctas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 36px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--forest);
+  }
+  .btn-primary {
+    background: var(--forest);
+    color: var(--cream);
+  }
+  .btn-primary:hover { background: var(--burnt); border-color: var(--burnt); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--forest);
+  }
+  .btn-secondary:hover { background: var(--forest); color: var(--cream); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--forest);
+    color: rgba(250, 247, 242, 0.85);
+    padding: 80px 0 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .footer-brand em { font-style: italic; color: #e8a278; }
+  .footer-tag {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(250, 247, 242, 0.7);
+    max-width: 320px;
+  }
+  .footer-col h4 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #e8a278;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .footer-col a {
+    display: block;
+    font-family: var(--sans);
+    font-size: 14px;
+    color: rgba(250, 247, 242, 0.78);
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-weight: 300;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--cream); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(250, 247, 242, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: rgba(250, 247, 242, 0.55);
+    font-weight: 300;
+  }
+
+  /* ============ REVEAL ANIMATION ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    .container, .container-tight, .container-wide { padding: 0 24px; }
+    nav { padding: 18px 24px; }
+    .nav-links { display: none; }
+    .nav-mobile { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest); font-weight: 500; text-decoration: none; }
+    .hero { padding: 140px 0 80px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+    .hero-meta { flex-wrap: wrap; gap: 28px; }
+    .thesis, .founder, .proof { padding: 100px 0; }
+    .thesis-grid, .founder-grid, .ladder-header { grid-template-columns: 1fr; gap: 40px; }
+    .method { padding: 100px 0; }
+    .method-steps { grid-template-columns: 1fr; gap: 48px; }
+    .pattern-grid { grid-template-columns: 1fr; gap: 50px; }
+    .authority { padding: 80px 0; }
+    .authority-grid { grid-template-columns: 1fr; gap: 50px; }
+    .rung { grid-template-columns: 50px 1fr; gap: 16px; padding: 28px 0; }
+    .rung-desc, .rung-arrow { display: none; }
+    .rung-price { grid-column: 2; justify-content: flex-start; gap: 20px; margin-top: 4px; }
+    .rung-name { font-size: 22px; }
+    .closing { padding: 100px 0; }
+    .founder-facts { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <a href="#" class="nav-brand">VD <em>Advisory</em> Group</a>
+  <div class="nav-links">
+    <a href="#thesis">Practice</a>
+    <a href="#method">Method</a>
+    <a href="#founder">Founder</a>
+    <a href="#work">Engagements</a>
+    <a href="https://go.veronicadietz.com/session" class="nav-cta">Book a session</a>
+  </div>
+  <a href="#work" class="nav-mobile">Engagements →</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-eyebrow">Diagnostic Strategy. Est. 2016.</div>
+        <h1>The firm founders call when the <em>answer</em> isn't <em>more effort.</em></h1>
+        <p class="hero-lede">VD Advisory Group locates the one load-bearing issue generating most of the friction inside your business, so you stop treating symptoms and restructure the thing actually causing them.</p>
+        <div class="hero-meta">
+          <span>Founders served<strong>100+</strong></span>
+          <span>Years in practice<strong>Nearly a decade</strong></span>
+          <span>Primary work<strong>1:1 Advisory</strong></span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/69c5b0cd146bc512c4e5d379.jpeg" alt="VD Advisory Group" loading="eager" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STRIP ============ -->
+<div class="strip">
+  <div class="strip-inner">
+    <span>Positioning Diagnostics</span>
+    <span>Offer Structure</span>
+    <span>Decision Architecture</span>
+    <span>Pattern Recognition</span>
+    <span>Private Advisory</span>
+    <span>Positioning Diagnostics</span>
+    <span>Offer Structure</span>
+    <span>Decision Architecture</span>
+    <span>Pattern Recognition</span>
+    <span>Private Advisory</span>
+  </div>
+</div>
+
+<!-- ============ THESIS ============ -->
+<section class="thesis" id="thesis">
+  <div class="container">
+    <div class="thesis-grid">
+      <div class="reveal">
+        <div class="section-label">The Practice
+          <span class="section-label-num">i. Orientation</span>
+        </div>
+      </div>
+      <div class="thesis-body reveal">
+        <h2>Most founders don't have a <em>marketing</em> problem. They have a <em>structural</em> one.</h2>
+        <p>The pattern is almost always the same. Traffic is fine. The work is good. The founder is capable. Something is still off, and no amount of new tactics, new copy, or new launches fixes it.</p>
+        <p>That's because the issue isn't downstream. It's sitting one layer up, inside positioning, offer structure, or the quiet assumptions the business was built on two years ago and never revisited.</p>
+        <p class="callout">Execution without orientation creates expensive cycles.</p>
+        <p>VD Advisory Group is the diagnostic practice behind Veronica Dietz. The work is private, slow, and specific. Clients come here when they're tired of guessing and ready to see the whole board.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="method" id="method">
+  <div class="container">
+    <div class="thesis-grid" style="margin-bottom: 80px;">
+      <div class="reveal">
+        <div class="section-label">The Method
+          <span class="section-label-num">ii. How the work moves</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h2>Find the load-bearing issue. <em>Name it. Restructure it.</em></h2>
+        <p class="method-intro">Every business has one foundational structural issue generating most of its downstream friction. When you find it and name it, the list of things to "fix" gets shorter, not longer. This is the work.</p>
+      </div>
+    </div>
+    <div class="method-steps">
+      <div class="method-step reveal">
+        <h3>Pattern Recognition</h3>
+        <p>We read the business the way it actually exists today. Not the pitch deck version, not the origin story. We look at what's getting traction, what's quietly draining energy, and where the positioning is fighting the audience.</p>
+      </div>
+      <div class="method-step reveal">
+        <h3>Structural Diagnosis</h3>
+        <p>We locate the load-bearing issue. This is rarely where founders think it is. Usually the frustration surfaces at the marketing layer, but the fracture is sitting underneath in the offer or the identity of the business itself.</p>
+      </div>
+      <div class="method-step reveal">
+        <h3>Decision Architecture</h3>
+        <p>We restructure how decisions get made going forward, so growth compounds instead of resetting. You leave with fewer open questions, a named pattern, and a way to evaluate new opportunities without relitigating the whole business each time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section class="founder" id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="reveal">
+        <div class="founder-image">
+          <img src="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/69cd9cafbd01eb0490660607.png" alt="Veronica Dietz, founder of VD Advisory Group" loading="lazy" />
+        </div>
+        <p class="founder-caption">Veronica Dietz, Founder</p>
+      </div>
+      <div class="founder-content reveal">
+        <div class="section-label" style="margin-bottom: 24px;">The Founder
+          <span class="section-label-num">iii. Who runs the practice</span>
+        </div>
+        <h2>Veronica Dietz has spent <em>nearly a decade</em> diagnosing what's actually happening inside founder-led businesses.</h2>
+        <p>She started in execution. Brand strategy, marketing systems, conversion infrastructure, the full agency stack. After close to a decade running Tyche Digital Agency across clients from early-stage startups to Fortune 500 brands, a pattern kept surfacing.</p>
+        <p>The problem was almost never what the founder said it was. The real issue was usually one layer up, structural, and invisible until someone outside the business named it out loud.</p>
+        <p>That recognition became the practice. VD Advisory is where that diagnostic work lives now: private, 1:1, and built for founders who are done treating symptoms.</p>
+
+        <div class="founder-facts">
+          <div class="founder-fact">Based<strong>Orange County &amp; Las Vegas</strong></div>
+          <div class="founder-fact">Practice<strong>Nearly ten years</strong></div>
+          <div class="founder-fact">Parallel firm<strong>Tyche Digital Agency</strong></div>
+          <div class="founder-fact">Podcast<strong>The Aligned Edit, Season 3</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATTERNS (PROOF) ============ -->
+<section class="proof">
+  <div class="container">
+    <div class="proof-header reveal">
+      <div class="section-label" style="display: inline-block; margin-bottom: 32px;">Pattern Library
+        <span class="section-label-num">iv. What shows up repeatedly</span>
+      </div>
+      <h2>The four load-bearing issues we see <em>most often</em>.</h2>
+    </div>
+    <div class="pattern-grid">
+      <div class="pattern reveal">
+        <div class="pattern-tag">Pattern 01</div>
+        <h3>The offer was built for a market stage you already left.</h3>
+        <p>What sold two years ago isn't converting now, and the instinct is to rewrite the copy. The issue isn't the copy. The offer itself is positioned for an audience that has matured past it.</p>
+      </div>
+      <div class="pattern reveal">
+        <div class="pattern-tag">Pattern 02</div>
+        <h3>Traffic is fine. The wrong people are landing.</h3>
+        <p>Marketing is doing its job. The audience is showing up. They just aren't the audience the offer was designed for, and every sales conversation feels like translation work. The fracture is in positioning, not reach.</p>
+      </div>
+      <div class="pattern reveal">
+        <div class="pattern-tag">Pattern 03</div>
+        <h3>The business is executing before it's oriented.</h3>
+        <p>Launches keep happening. Content keeps shipping. Underneath, nobody has named what the business is actually building toward this year, so every decision gets made in isolation and nothing compounds.</p>
+      </div>
+      <div class="pattern reveal">
+        <div class="pattern-tag">Pattern 04</div>
+        <h3>The founder outgrew the brand and hasn't said it yet.</h3>
+        <p>The original positioning worked because it was honest at the time. It isn't anymore. The brand still speaks in a voice the founder has quietly evolved past, and the mismatch shows up everywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFER LADDER ============ -->
+<section class="ladder" id="work">
+  <div class="container">
+    <div class="ladder-header">
+      <div class="reveal">
+        <div class="section-label">Engagements
+          <span class="section-label-num">v. How to work together</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h2>Five ways in. Pick the <em>right one</em> for where you are.</h2>
+        <p>Most founders start with the free diagnostic and self-select up from there. A few know on first read that they need the deeper work. Either is correct.</p>
+      </div>
+    </div>
+    <div class="ladder-list">
+      <a href="https://start.veronicadietz.com/" class="rung reveal">
+        <div class="rung-num">i.</div>
+        <div>
+          <div class="rung-name">Why This Feels Off + Diagnostic Partner</div>
+        </div>
+        <div class="rung-desc">The free entry point. A structural diagnostic bundle paired with the Diagnostic Partner AI chat tool, so you can see where the drift started before we ever talk.</div>
+        <div class="rung-price">
+          <span class="rung-price-value">Free</span>
+          <span class="rung-arrow">→</span>
+        </div>
+      </a>
+      <a href="https://go.veronicadietz.com/session" class="rung reveal">
+        <div class="rung-num">ii.</div>
+        <div>
+          <div class="rung-name">Direction Session</div>
+        </div>
+        <div class="rung-desc">60 minutes, 1:1. The entry point for paid advisory. We locate what you should and shouldn't be focusing on next, and you leave with a named direction.</div>
+        <div class="rung-price">
+          <span class="rung-price-value">$500</span>
+          <span class="rung-arrow">→</span>
+        </div>
+      </a>
+      <a href="orientation-intensive.html" class="rung reveal">
+        <div class="rung-num">iii.</div>
+        <div>
+          <div class="rung-name">Orientation Intensive</div>
+        </div>
+        <div class="rung-desc">A contained deep dive into one specific structural issue. Offer positioning, audience misalignment, or the decision backlog blocking the next phase of growth. Invite only.</div>
+        <div class="rung-price">
+          <span class="rung-price-value">$3,000</span>
+          <span class="rung-arrow">→</span>
+        </div>
+      </a>
+      <a href="https://go.veronicadietz.com/stop-starting-over" class="rung reveal">
+        <div class="rung-num">iv.</div>
+        <div>
+          <div class="rung-name">Stop Starting Over</div>
+        </div>
+        <div class="rung-desc">12 weeks, private. For founders who keep rebuilding the same thing from scratch. We restructure how decisions get made so growth compounds instead of resetting.</div>
+        <div class="rung-price">
+          <span class="rung-price-value">$7,000 – $7,500</span>
+          <span class="rung-arrow">→</span>
+        </div>
+      </a>
+      <a href="https://go.veronicadietz.com/the-residency" class="rung reveal">
+        <div class="rung-num">v.</div>
+        <div>
+          <div class="rung-name">The Residency</div>
+        </div>
+        <div class="rung-desc">The deepest container. Virtual or in person. For founders who want a thinking partner inside the business at a structural level, not a tactical one.</div>
+        <div class="rung-price">
+          <span class="rung-price-value">$10,000 / $20,000</span>
+          <span class="rung-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTHORITY / PODCAST ============ -->
+<section class="authority">
+  <div class="container">
+    <div class="authority-grid">
+      <div class="reveal">
+        <div class="section-label">The Aligned Edit
+          <span class="section-label-num">vi. Public body of work</span>
+        </div>
+        <h2 style="margin-top: 20px;">The podcast where the diagnostic work gets <em>aired in public.</em></h2>
+        <p>The Aligned Edit is Veronica's weekly audio practice. Season 3 is underway. No script, no performative expertise, no launch copy pretending to be education. Just the pattern recognition, said plainly, one episode at a time.</p>
+        <a href="http://listen.veronicadietz.com/" class="authority-cta">Listen to the podcast <span>→</span></a>
+      </div>
+      <div class="authority-stats reveal">
+        <div class="auth-stat">
+          <div class="auth-stat-num">50<em>+</em></div>
+          <div class="auth-stat-label">Episodes published</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-num">S<em>3</em></div>
+          <div class="auth-stat-label">Currently in production</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-num">1:<em>1</em></div>
+          <div class="auth-stat-label">Format, founder to founder</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-num">Weekly</div>
+          <div class="auth-stat-label">New episode cadence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing">
+  <div class="container-tight reveal">
+    <h2>If the business should be working better than it is, it's usually a <em>structural</em> read, not a tactical one.</h2>
+    <p>Start with the free diagnostic. Or book a Direction Session. Either way, the next move is naming the pattern.</p>
+    <div class="closing-ctas">
+      <a href="https://start.veronicadietz.com/" class="btn-secondary">Free diagnostic</a>
+      <a href="https://go.veronicadietz.com/session" class="btn-primary">Book a Direction Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">VD <em>Advisory</em> Group</div>
+        <p class="footer-tag">The diagnostic strategy practice of Veronica Dietz. Private 1:1 advisory for founders ready to see the whole board.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <a href="#thesis">About</a>
+        <a href="#method">Methodology</a>
+        <a href="#work">Engagements</a>
+        <a href="#founder">Founder</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ecosystem</h4>
+        <a href="https://veronicadietz.com">Veronica Dietz</a>
+        <a href="http://listen.veronicadietz.com/">The Aligned Edit</a>
+        <a href="https://tychedigitalagency.com">Tyche Digital</a>
+        <a href="https://start.veronicadietz.com/">Diagnostic Partner</a>
+      </div>
+      <div class="footer-col">
+        <h4>Start Here</h4>
+        <a href="https://start.veronicadietz.com/">Free Diagnostic</a>
+        <a href="https://go.veronicadietz.com/session">Direction Session</a>
+        <a href="https://go.veronicadietz.com/stop-starting-over">Stop Starting Over</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VD Advisory Group. All rights reserved.</span>
+      <span>Orange County · Las Vegas</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

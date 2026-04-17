@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Not Found | VD Advisory Group</title>
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/erNBMEPHr5mwBKO660ir/media/69d6aea33d829c73b2e6e140.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --burnt: #C4500A;
+    --forest: #283618;
+    --cream: #FAF7F2;
+    --cream-deep: #F2EDE4;
+    --muted: #5a5a55;
+    --hair: rgba(40, 54, 24, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    background: var(--cream);
+    color: #1a1a1a;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    padding: 22px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--hair);
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--forest);
+    text-decoration: none;
+  }
+  .nav-brand em { font-style: italic; color: var(--burnt); font-weight: 400; }
+  .nav-back {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--forest);
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--forest);
+    padding: 10px 20px;
+    transition: all 0.3s;
+  }
+  .nav-back:hover { background: var(--forest); color: var(--cream); }
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+  }
+  .content {
+    max-width: 640px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    font-weight: 500;
+    margin-bottom: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--burnt);
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(56px, 10vw, 120px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--forest);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+  }
+  h1 em { font-style: italic; color: var(--burnt); }
+  .lede {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--forest);
+    line-height: 1.4;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--forest);
+  }
+  .btn-primary { background: var(--forest); color: var(--cream); }
+  .btn-primary:hover { background: var(--burnt); border-color: var(--burnt); }
+  .btn-secondary { background: transparent; color: var(--forest); }
+  .btn-secondary:hover { background: var(--forest); color: var(--cream); }
+  footer {
+    padding: 32px 40px;
+    border-top: 1px solid var(--hair);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    nav { padding: 18px 24px; }
+    main { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">VD <em>Advisory</em> Group</a>
+  <a href="/" class="nav-back">← Home</a>
+</nav>
+<main>
+  <div class="content">
+    <div class="eyebrow">Misalignment Detected</div>
+    <h1>4<em>0</em>4</h1>
+    <p class="lede">The page you're looking for isn't where it used to be.</p>
+    <p>This might be a broken link, a moved page, or a URL that never existed. Either way, the practice hasn't gone anywhere.</p>
+    <div class="ctas">
+      <a href="/" class="btn btn-primary">Back to the practice</a>
+      <a href="https://start.veronicadietz.com/" class="btn btn-secondary">Start with the free diagnostic</a>
+    </div>
+  </div>
+</main>
+<footer>© 2026 VD Advisory Group</footer>
+</body>
+</html>

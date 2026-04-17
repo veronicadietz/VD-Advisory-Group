@@ -1,0 +1,26 @@
+# VD Advisory Group
+# https://www.vdadvisorygroup.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+
+# AI crawlers allowed (explicit, because some default to blocked)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.vdadvisorygroup.com/sitemap.xml

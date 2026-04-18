@@ -311,6 +311,72 @@
     to { transform: translateX(-50%); }
   }
 
+  /* ============ RECOGNITION ============ */
+  .recognition {
+    padding: 140px 0 120px;
+    position: relative;
+  }
+  .recognition-header {
+    max-width: 900px;
+    margin-bottom: 80px;
+  }
+  .recognition-header .section-label {
+    margin-bottom: 32px;
+  }
+  .recognition-header h2 {
+    margin-bottom: 0;
+  }
+  .recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--hair);
+  }
+  .recognition-item {
+    padding: 32px 40px 32px 0;
+    border-bottom: 1px solid var(--hair);
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.45;
+    font-weight: 400;
+    color: var(--forest);
+    font-style: italic;
+    position: relative;
+  }
+  .recognition-item:nth-child(odd) {
+    padding-right: 60px;
+    border-right: 1px solid var(--hair);
+  }
+  .recognition-item:nth-child(even) {
+    padding-left: 60px;
+  }
+  .recognition-item::before {
+    content: '·';
+    position: absolute;
+    left: -2px;
+    top: 30px;
+    color: var(--burnt);
+    font-size: 32px;
+    font-style: normal;
+    line-height: 1;
+  }
+  .recognition-item:nth-child(even)::before {
+    left: 40px;
+  }
+  .recognition-close {
+    margin-top: 60px;
+    max-width: 700px;
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .recognition-close strong {
+    color: var(--forest);
+    font-weight: 400;
+  }
+
   /* ============ THESIS SECTION ============ */
   .thesis {
     padding: 160px 0 140px;
@@ -833,6 +899,17 @@
     .hero-grid { grid-template-columns: 1fr; gap: 60px; }
     .hero-meta { flex-wrap: wrap; gap: 28px; }
     .thesis, .founder, .proof { padding: 100px 0; }
+    .recognition { padding: 80px 0; }
+    .recognition-grid { grid-template-columns: 1fr; }
+    .recognition-item {
+      padding: 24px 0 !important;
+      border-right: none !important;
+      font-size: 19px;
+    }
+    .recognition-item::before {
+      left: -2px !important;
+      top: 22px;
+    }
     .thesis-grid, .founder-grid, .ladder-header { grid-template-columns: 1fr; gap: 40px; }
     .method { padding: 100px 0; }
     .method-steps { grid-template-columns: 1fr; gap: 48px; }
@@ -872,7 +949,7 @@
       <div class="reveal">
         <div class="hero-eyebrow">Diagnostic Strategy. Est. 2016.</div>
         <h1>The firm founders call when the <em>answer</em> isn't <em>more effort.</em></h1>
-        <p class="hero-lede">VD Advisory Group locates the one load-bearing issue generating most of the friction inside your business, so you stop treating symptoms and restructure the thing actually causing them.</p>
+        <p class="hero-lede">You have probably already tried to fix this through messaging, offers, consistency, or showing up more. But when the real issue is structural, more effort just creates a cleaner version of the same problem. VD Advisory is where that gets named and restructured.</p>
         <div class="hero-meta">
           <span>Founders served<strong>100+</strong></span>
           <span>Years in practice<strong>Nearly a decade</strong></span>
@@ -901,6 +978,27 @@
     <span>Private Advisory</span>
   </div>
 </div>
+
+<!-- ============ RECOGNITION ============ -->
+<section class="recognition">
+  <div class="container">
+    <div class="recognition-header reveal">
+      <div class="section-label">Recognition
+        <span class="section-label-num">0. Before the work begins</span>
+      </div>
+      <h2>You are probably here because <em>something has been off</em> for a while.</h2>
+    </div>
+    <div class="recognition-grid reveal">
+      <div class="recognition-item">Your business works, but not as well as it should for how much effort you are putting in.</div>
+      <div class="recognition-item">You keep circling the same decisions in different clothes.</div>
+      <div class="recognition-item">Your offers are not wrong, but they are not holding.</div>
+      <div class="recognition-item">The content is good. The traffic is fine. The conversions are not matching either one.</div>
+      <div class="recognition-item">You have quietly outgrown the way your business was originally built.</div>
+      <div class="recognition-item">You do not need more ideas. You need a correct read of what is actually happening.</div>
+    </div>
+    <p class="recognition-close reveal">If more than two of these are true right now, <strong>you are not looking at a marketing problem.</strong> Keep reading.</p>
+  </div>
+</section>
 
 <!-- ============ THESIS ============ -->
 <section class="thesis" id="thesis">
@@ -967,10 +1065,11 @@
         <div class="section-label" style="margin-bottom: 24px;">The Founder
           <span class="section-label-num">iii. Who runs the practice</span>
         </div>
-        <h2>Veronica Dietz has spent <em>nearly a decade</em> diagnosing what's actually happening inside founder-led businesses.</h2>
-        <p>She started in execution. Brand strategy, marketing systems, conversion infrastructure, the full agency stack. After close to a decade running Tyche Digital Agency across clients from early-stage startups to Fortune 500 brands, a pattern kept surfacing.</p>
+        <h2>Most strategists tell you what to do. <em>Veronica tells you what is actually happening.</em></h2>
+        <p>She has spent nearly a decade diagnosing what is actually going on inside founder-led businesses. Not the pitch deck version. The real one. She started in execution, running Tyche Digital Agency across clients from early-stage startups to Fortune 500 brands. After close to ten years of that work, one pattern kept surfacing.</p>
         <p>The problem was almost never what the founder said it was. The real issue was usually one layer up, structural, and invisible until someone outside the business named it out loud.</p>
-        <p>That recognition became the practice. VD Advisory is where that diagnostic work lives now: private, 1:1, and built for founders who are done treating symptoms.</p>
+        <p>That recognition became the practice. What happens in her room is not coaching, not consulting, not advice. It is pattern recognition, spoken out loud. The founders who come here describe the same thing afterward: somebody finally said the sentence they had been circling for months without being able to form.</p>
+        <p>VD Advisory is where that happens on purpose.</p>
 
         <div class="founder-facts">
           <div class="founder-fact">Based<strong>Orange County &amp; Las Vegas</strong></div>
@@ -990,28 +1089,28 @@
       <div class="section-label" style="display: inline-block; margin-bottom: 32px;">Pattern Library
         <span class="section-label-num">iv. What shows up repeatedly</span>
       </div>
-      <h2>The four load-bearing issues we see <em>most often</em>.</h2>
+      <h2>The four sentences founders say <em>right before they call us</em>.</h2>
     </div>
     <div class="pattern-grid">
       <div class="pattern reveal">
         <div class="pattern-tag">Pattern 01</div>
-        <h3>The offer was built for a market stage you already left.</h3>
-        <p>What sold two years ago isn't converting now, and the instinct is to rewrite the copy. The issue isn't the copy. The offer itself is positioned for an audience that has matured past it.</p>
+        <h3>"This used to convert. Now something is off and I can't tell where."</h3>
+        <p>What sold two years ago isn't landing now, and the instinct is to rewrite the copy. The copy is not the issue. The offer itself is positioned for an audience that has matured past it. You didn't do anything wrong. You outgrew the offer and kept selling it anyway.</p>
       </div>
       <div class="pattern reveal">
         <div class="pattern-tag">Pattern 02</div>
-        <h3>Traffic is fine. The wrong people are landing.</h3>
-        <p>Marketing is doing its job. The audience is showing up. They just aren't the audience the offer was designed for, and every sales conversation feels like translation work. The fracture is in positioning, not reach.</p>
+        <h3>"I'm getting attention. It just isn't the right attention."</h3>
+        <p>Marketing is doing its job. The audience is showing up. They are not the audience the offer was designed for, and every sales conversation feels like translation work. The fracture is in positioning, not reach. More visibility will not fix this. Clearer positioning will.</p>
       </div>
       <div class="pattern reveal">
         <div class="pattern-tag">Pattern 03</div>
-        <h3>The business is executing before it's oriented.</h3>
-        <p>Launches keep happening. Content keeps shipping. Underneath, nobody has named what the business is actually building toward this year, so every decision gets made in isolation and nothing compounds.</p>
+        <h3>"I'm moving fast and nothing is compounding."</h3>
+        <p>Launches keep happening. Content keeps shipping. Underneath, nobody has named what the business is actually building toward this year, so every decision gets made in isolation. The work is real. The orientation is missing. That is why it is not holding.</p>
       </div>
       <div class="pattern reveal">
         <div class="pattern-tag">Pattern 04</div>
-        <h3>The founder outgrew the brand and hasn't said it yet.</h3>
-        <p>The original positioning worked because it was honest at the time. It isn't anymore. The brand still speaks in a voice the founder has quietly evolved past, and the mismatch shows up everywhere.</p>
+        <h3>"I don't sound like myself in my own business anymore."</h3>
+        <p>The original positioning worked because it was honest at the time. It isn't anymore. The brand still speaks in a voice you have quietly evolved past, and the mismatch shows up everywhere. This is one of the most common structural issues we see, and one of the last ones founders let themselves name.</p>
       </div>
     </div>
   </div>
@@ -1027,7 +1126,7 @@
         </div>
       </div>
       <div class="reveal">
-        <h2>Five ways in. Pick the <em>right one</em> for where you are.</h2>
+        <h2>Five ways in. <em>Different founders, different containers.</em></h2>
         <p>Most founders start with the free diagnostic and self-select up from there. A few know on first read that they need the deeper work. Either is correct.</p>
       </div>
     </div>
@@ -1037,7 +1136,7 @@
         <div>
           <div class="rung-name">Why This Feels Off + Diagnostic Partner</div>
         </div>
-        <div class="rung-desc">The free entry point. A structural diagnostic bundle paired with the Diagnostic Partner AI chat tool, so you can see where the drift started before we ever talk.</div>
+        <div class="rung-desc">For the founder who can feel the drift but cannot name it yet. A structural diagnostic bundle paired with the Diagnostic Partner AI chat tool. Free. Use it before you make another move.</div>
         <div class="rung-price">
           <span class="rung-price-value">Free</span>
           <span class="rung-arrow">→</span>
@@ -1048,7 +1147,7 @@
         <div>
           <div class="rung-name">Direction Session</div>
         </div>
-        <div class="rung-desc">60 minutes, 1:1. The entry point for paid advisory. We locate what you should and shouldn't be focusing on next, and you leave with a named direction.</div>
+        <div class="rung-desc">For the founder facing one heavy decision she cannot get clean on. 60 minutes, 1:1. We locate what you should and should not be focusing on next. You leave with a named direction, not another list.</div>
         <div class="rung-price">
           <span class="rung-price-value">$500</span>
           <span class="rung-arrow">→</span>
@@ -1059,7 +1158,7 @@
         <div>
           <div class="rung-name">Orientation Intensive</div>
         </div>
-        <div class="rung-desc">A contained deep dive into one specific structural issue. Offer positioning, audience misalignment, or the decision backlog blocking the next phase of growth. Invite only.</div>
+        <div class="rung-desc">For the business with multiple moving parts and no clear sequence. A contained deep dive into one specific structural issue. Offer, audience, or the decision backlog blocking the next phase. Invite only.</div>
         <div class="rung-price">
           <span class="rung-price-value">$3,000</span>
           <span class="rung-arrow">→</span>
@@ -1070,7 +1169,7 @@
         <div>
           <div class="rung-name">Stop Starting Over</div>
         </div>
-        <div class="rung-desc">12 weeks, private. For founders who keep rebuilding the same thing from scratch. We restructure how decisions get made so growth compounds instead of resetting.</div>
+        <div class="rung-desc">For founders trapped in rebuild cycles that keep burning time and trust. 12 weeks, private. We restructure how decisions get made so growth compounds instead of resetting.</div>
         <div class="rung-price">
           <span class="rung-price-value">$7,000 – $7,500</span>
           <span class="rung-arrow">→</span>
@@ -1081,7 +1180,7 @@
         <div>
           <div class="rung-name">The Residency</div>
         </div>
-        <div class="rung-desc">The deepest container. Virtual or in person. For founders who want a thinking partner inside the business at a structural level, not a tactical one.</div>
+        <div class="rung-desc">For founders who need a thinking partner embedded at the structural level, not the tactical one. The deepest container. Virtual or in person. Access to the practice across a full season of the business.</div>
         <div class="rung-price">
           <span class="rung-price-value">$10,000 / $20,000</span>
           <span class="rung-arrow">→</span>
@@ -1128,10 +1227,10 @@
 <!-- ============ CLOSING ============ -->
 <section class="closing">
   <div class="container-tight reveal">
-    <h2>If the business should be working better than it is, it's usually a <em>structural</em> read, not a tactical one.</h2>
-    <p>Start with the free diagnostic. Or book a Direction Session. Either way, the next move is naming the pattern.</p>
+    <h2>You have been managing the symptoms. <em>Let's find what is generating them.</em></h2>
+    <p>You do not need to prepare a perfect explanation. We look at the business as it is, identify what is actually creating drag, and leave with a named pattern and a clear next decision. Start with the free diagnostic if you want to see it on your own first. Book a Direction Session if you are ready to name it together.</p>
     <div class="closing-ctas">
-      <a href="https://start.veronicadietz.com/" class="btn-secondary">Free diagnostic</a>
+      <a href="https://start.veronicadietz.com/" class="btn-secondary">Get a structural read</a>
       <a href="https://go.veronicadietz.com/session" class="btn-primary">Book a Direction Session →</a>
     </div>
   </div>
